@@ -4,10 +4,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.catalina.User;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name="report")
-public class report {
+public class report implements Serializable {
 
     @Column(name="ev_type")
     @JsonProperty
