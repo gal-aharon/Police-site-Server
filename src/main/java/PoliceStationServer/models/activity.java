@@ -3,6 +3,8 @@ package PoliceStationServer.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="activity")
@@ -16,9 +18,9 @@ public class activity {
     @JsonProperty
     private String actTime;
 
-    @Column(name="po_list")
+    @ManyToMany(mappedBy = "activities")
     @JsonProperty
-    private String[] poList;
+    private Set<user> poList = new HashSet<>();
 
     @Column(name="act_goal")
     @JsonProperty
@@ -44,7 +46,6 @@ public class activity {
     @Column(name="act_loc_y")
     @JsonProperty
     private Double actLocY;
-
 
     public activity() {
     }

@@ -3,7 +3,9 @@ package PoliceStationServer.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name="users")
@@ -37,6 +39,14 @@ public class user {
     @Column(name="cur_loc_y")
     @JsonProperty
     private Double curLocY;
+
+    @ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+            name = "user_activity",
+            joinColumns = { @JoinColumn(name = "user_id") },
+            inverseJoinColumns = { @JoinColumn(name = "activity_id") }
+    )
+    Set<activity> activities = new HashSet<>();
 
     public user() {
     }
