@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>shatap</groupId>
-    <artifactId>policeStationServer</artifactId>
+    <artifactId>PoliceStationServer</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <parent>
