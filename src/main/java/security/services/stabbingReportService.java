@@ -16,4 +16,8 @@ public class stabbingReportService {
         return stabbingReportRepository.findAll();
     }
 
+    public List<stabbingReport> getById(String id) {
+        return stabbingReportRepository.findByReport(id);
+    }
+
 }

@@ -15,4 +15,8 @@ public class kidnapReportService {
     public List<kidnapReport> getAll() {
         return kidnapReportRepository.findAll();
     }
+
+    public List<kidnapReport> getById(String id) {
+        return kidnapReportRepository.findByReport(id);
+    }
 }

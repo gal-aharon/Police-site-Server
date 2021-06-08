@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.*;
 
 @Entity
-//@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name="report")
 public class report {
 
@@ -43,5 +43,48 @@ public class report {
     private String evArea;
 
     public report() {
+    }
+
+    public report(report r) {
+        this.evType = r.getEvType();
+        this.evTime = r.getEvTime();
+        this.evReportTime = r.getEvReportTime();
+        this.reporter = r.getReporter();
+        this.reportId = r.getReportId();
+        this.evLocationX = r.getEvLocationX();
+        this.evLocationY = r.getEvLocationY();
+        this.evArea = r.getEvArea();
+    }
+
+    public String getEvType() {
+        return evType;
+    }
+
+    public String getEvTime() {
+        return evTime;
+    }
+
+    public String getEvReportTime() {
+        return evReportTime;
+    }
+
+    public String getReporter() {
+        return reporter;
+    }
+
+    public String getReportId() {
+        return reportId;
+    }
+
+    public Double getEvLocationX() {
+        return evLocationX;
+    }
+
+    public Double getEvLocationY() {
+        return evLocationY;
+    }
+
+    public String getEvArea() {
+        return evArea;
     }
 }

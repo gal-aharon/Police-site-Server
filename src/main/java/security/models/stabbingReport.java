@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.*;
 
 @Entity
+@PrimaryKeyJoinColumn(name = "report_id")
 @Table(name="stabbing_report")
 public class stabbingReport {
 

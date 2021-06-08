@@ -30,6 +30,14 @@ public class user {
     @JsonProperty
     private String userPerm;
 
+    @Column(name="cur_loc_x")
+    @JsonProperty
+    private Double curLocX;
+
+    @Column(name="cur_loc_y")
+    @JsonProperty
+    private Double curLocY;
+
     public user() {
     }
 }

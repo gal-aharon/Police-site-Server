@@ -2,10 +2,12 @@ package security.repositories;
 
 
 import security.models.kidnapReport;
-import security.models.report;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface kidnapReportRepository extends JpaRepository<kidnapReport, String> {
+    List<kidnapReport> findByReport(String ReportId);
 }

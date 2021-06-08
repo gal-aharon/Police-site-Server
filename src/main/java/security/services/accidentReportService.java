@@ -14,4 +14,8 @@ public class accidentReportService {
     public List<accidentReport> getAll() {
         return accidentReportRepository.findAll();
     }
+
+    public List<accidentReport> getById(String id) {
+        return accidentReportRepository.findByReport(id);
+    }
 }
