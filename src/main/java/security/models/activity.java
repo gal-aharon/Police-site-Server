@@ -3,6 +3,8 @@ package security.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="activity")
@@ -15,10 +17,6 @@ public class activity {
     @Column(name="act_time")
     @JsonProperty
     private String actTime;
-
-    @Column(name="po_list")
-    @JsonProperty
-    private String[] poList;
 
     @Column(name="act_goal")
     @JsonProperty
@@ -45,6 +43,9 @@ public class activity {
     @JsonProperty
     private Double actLocY;
 
+    @ManyToMany(mappedBy = "activities")
+    @JsonProperty
+    private Set<user> poList = new HashSet<>();
 
     public activity() {
     }
