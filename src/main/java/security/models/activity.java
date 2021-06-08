@@ -1,11 +1,8 @@
-package main.java.models;
+package security.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="activity")
@@ -21,7 +18,7 @@ public class activity {
 
     @Column(name="po_list")
     @JsonProperty
-    private int[] poList;
+    private String[] poList;
 
     @Column(name="act_goal")
     @JsonProperty
@@ -30,7 +27,7 @@ public class activity {
     @Id
     @Column(name="act_id")
     @JsonProperty
-    private int actId;
+    private String actId;
 
     @Column(name="status")
     @JsonProperty
@@ -38,13 +35,17 @@ public class activity {
 
     @Column(name="act_approver")
     @JsonProperty
-    private int actApprover;
+    private String actApprover;
 
     @Column(name="act_loc_x")
     @JsonProperty
-    private double actLocX;
+    private Double actLocX;
 
     @Column(name="act_loc_y")
     @JsonProperty
-    private double actLocY;
+    private Double actLocY;
+
+
+    public activity() {
+    }
 }

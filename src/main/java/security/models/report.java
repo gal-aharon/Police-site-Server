@@ -1,14 +1,13 @@
-package main.java.models;
+package security.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.apache.catalina.User;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
+//@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name="report")
-public class report implements Serializable {
+public class report {
 
     @Column(name="ev_type")
     @JsonProperty
@@ -22,11 +21,9 @@ public class report implements Serializable {
     @JsonProperty
     private String evReportTime;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
     @Column(name="reporter_id")
     @JsonProperty
-    private User reporter;
+    private String reporter;
 
     @Id
     @Column(name="report_id")
@@ -44,4 +41,7 @@ public class report implements Serializable {
     @Column(name="ev_area")
     @JsonProperty
     private String evArea;
+
+    public report() {
+    }
 }

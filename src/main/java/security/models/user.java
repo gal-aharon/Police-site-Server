@@ -1,14 +1,12 @@
-package main.java.models;
+package security.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name="user")
+@Table(name="users")
 public class user {
 
     @Column(name="username")
@@ -26,9 +24,12 @@ public class user {
     @Id
     @Column(name="user_id")
     @JsonProperty
-    private int userId;
+    private String userId;
 
     @Column(name="user_perm")
     @JsonProperty
     private String userPerm;
+
+    public user() {
+    }
 }

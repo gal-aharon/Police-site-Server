@@ -1,13 +1,11 @@
-package main.java.models;
+package security.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.apache.catalina.User;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
+@Entity
+@Table(name="accident_report")
 public class accidentReport {
 
     @Column(name="hitter_id")
@@ -23,9 +21,11 @@ public class accidentReport {
     private Integer casualtiesNum;
 
     @Id
-    @ManyToOne
-    @JoinColumn(name = "report_id")
+    @Column(name="accident_report_id")
+    @JsonProperty
+    private String accidentId;
+
     @Column(name="report_id")
     @JsonProperty
-    private report report;
+    private String report;
 }

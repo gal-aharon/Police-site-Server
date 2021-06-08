@@ -1,12 +1,12 @@
-package main.java.models;
+package security.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
+@Entity
+//@PrimaryKeyJoinColumn(name = "report_id")
+@Table(name="kidnap_report")
 public class kidnapReport {
 
     @Column(name="kidnapper_id")
@@ -17,14 +17,19 @@ public class kidnapReport {
     @JsonProperty
     private String lastPlace;
 
-    @Id
-    @ManyToOne
-    @JoinColumn(name = "report_id")
     @Column(name="report_id")
     @JsonProperty
-    private report report;
+    private String reportId;
+
+    @Id
+    @Column(name="kidnap_report_id")
+    @JsonProperty
+    private String kidnapId;
 
     @Column(name="kidnapped_id")
     @JsonProperty
-    private Integer kidnappedId;
+    private String kidnappedId;
+
+    public kidnapReport() {
+    }
 }
