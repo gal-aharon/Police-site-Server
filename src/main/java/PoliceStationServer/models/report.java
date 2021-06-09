@@ -3,6 +3,7 @@ package PoliceStationServer.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -15,11 +16,11 @@ public class report {
 
     @Column(name = "ev_time")
     @JsonProperty
-    private String ev_time;
+    private Timestamp ev_time;
 
     @Column(name = "ev_report_time")
     @JsonProperty
-    private String evreporttime;
+    private Timestamp evreporttime;
 
     @Column(name = "reporter_id")
     @JsonProperty
