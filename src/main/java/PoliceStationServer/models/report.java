@@ -16,11 +16,11 @@ public class report {
 
     @Column(name = "ev_time")
     @JsonProperty
-    private Timestamp ev_time;
+    private String ev_time;
 
     @Column(name = "ev_report_time")
     @JsonProperty
-    private Timestamp evreporttime;
+    private String evreporttime;
 
     @Column(name = "reporter_id")
     @JsonProperty
