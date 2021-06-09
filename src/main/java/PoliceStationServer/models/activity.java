@@ -3,6 +3,7 @@ package PoliceStationServer.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,7 +17,7 @@ public class activity {
 
     @Column(name="act_time")
     @JsonProperty
-    private String act_time;
+    private Timestamp act_time;
 
     @ManyToMany(mappedBy = "activities")
     @JsonProperty
@@ -36,9 +37,10 @@ public class activity {
     @JsonProperty
     private String status;
 
-    @Column(name="act_approver")
+    @ManyToOne()
+    @JoinColumn(name="act_approver", referencedColumnName = "user_id", insertable = false, updatable = false)
     @JsonProperty
-    private String act_approver;
+    private user act_approver;
 
     @Column(name="act_loc_x")
     @JsonProperty
@@ -49,5 +51,13 @@ public class activity {
     private Double act_locy;
 
     public activity() {
+    }
+
+    public Set<user> getPo_list() {
+        return po_list;
+    }
+
+    public Integer getAct_id() {
+        return act_id;
     }
 }
