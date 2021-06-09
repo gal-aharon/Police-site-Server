@@ -34,4 +34,8 @@ public class kidnapReport {
     public kidnapReport() {
         super();
     }
+
+    public void setReport(Integer report) {
+        this.report = report;
+    }
 }

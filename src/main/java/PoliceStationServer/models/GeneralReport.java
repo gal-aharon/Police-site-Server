@@ -28,12 +28,4 @@ public class GeneralReport {
     public kidnapReport getKidnappingReport() {
         return kidnappingReport;
     }
-
-    public int getReport_id() {
-        return report_id;
-    }
-
-    public void setReport_id(int report_id) {
-        this.report_id = report_id;
-    }
 }
