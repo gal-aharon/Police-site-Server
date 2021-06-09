@@ -19,7 +19,7 @@ public class report {
 
     @Column(name = "ev_report_time")
     @JsonProperty
-    private String ev_report_time;
+    private String evreporttime;
 
     @Column(name = "reporter_id")
     @JsonProperty

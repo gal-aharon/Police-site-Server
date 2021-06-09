@@ -29,7 +29,10 @@ public class reportService {
         return reportRepository.findAll();
     }
 
-    public report getNewest() { return reportRepository.findAll(Sort.by(Sort.Direction.DESC, "ev_report_time")).get(0); }
+    public report getNewest() {
+        System.out.println("test 2 : get newest");
+        return reportRepository.findAll(Sort.by(Sort.Direction.DESC, "evreporttime")).get(0);
+    }
 
     public void add(GeneralReport report) {
         reportRepository.save(report.getRep());
