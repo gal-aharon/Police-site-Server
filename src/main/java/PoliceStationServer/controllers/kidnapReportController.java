@@ -16,6 +16,7 @@ public class kidnapReportController {
 
     @GetMapping("")
     public List<kidnapReport> getAll() {
+        System.out.println("controller");
         return kidnapReportService.getAll();
     }
 

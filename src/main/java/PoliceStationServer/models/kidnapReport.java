@@ -31,7 +31,4 @@ public class kidnapReport {
     @JsonProperty
     private String kidnapped_id;
 
-    public kidnapReport() {
-        super();
-    }
 }

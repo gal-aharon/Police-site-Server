@@ -13,6 +13,7 @@ public class kidnapReportService {
     PoliceStationServer.repositories.kidnapReportRepository kidnapReportRepository;
 
     public List<kidnapReport> getAll() {
+        System.out.println("service");
         return kidnapReportRepository.findAll();
     }
 
