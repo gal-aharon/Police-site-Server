@@ -16,7 +16,7 @@ public class shootingReportService {
         return shootingReportRepository.findAll();
     }
 
-    public shootingReport getById(String id) {
+    public shootingReport getById(Integer id) {
         return shootingReportRepository.findByReport(id);
     }
 

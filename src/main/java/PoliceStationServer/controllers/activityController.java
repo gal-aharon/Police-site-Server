@@ -21,6 +21,7 @@ public class activityController {
     @PostMapping("/add")
     @ResponseBody
     public void addActivity(@RequestBody activity act) {
+        System.out.println("test: " + act);
         activityService.add(act);
     }
 

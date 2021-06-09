@@ -20,7 +20,7 @@ public class stabbingReportController {
     }
 
     @GetMapping("id/{id}")
-    public List<stabbingReport> getById(@PathVariable String id) {
+    public List<stabbingReport> getById(@PathVariable Integer id) {
         return stabbingReportService.getById(id);
     }
 }

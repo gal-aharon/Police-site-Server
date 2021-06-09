@@ -20,7 +20,7 @@ public class accidentReportController {
     }
 
     @GetMapping("id/{id}")
-    public List<accidentReport> getById(@PathVariable String id) {
+    public List<accidentReport> getById(@PathVariable Integer id) {
         return accidentReportService.getById(id);
     }
 }

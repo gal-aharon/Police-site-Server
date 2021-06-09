@@ -19,7 +19,7 @@ public class kidnapReport {
 
     @Column(name = "report_id")
     @JsonProperty
-    private String report;
+    private Integer report;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

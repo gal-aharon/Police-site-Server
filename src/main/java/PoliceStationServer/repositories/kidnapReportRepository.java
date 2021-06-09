@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface kidnapReportRepository extends JpaRepository<kidnapReport, String> {
-    List<kidnapReport> findByReport(String ReportId);
+    List<kidnapReport> findByReport(Integer ReportId);
 }

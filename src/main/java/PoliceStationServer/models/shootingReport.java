@@ -25,7 +25,7 @@ public class shootingReport {
 
     @Column(name="report_id")
     @JsonProperty
-    private String report;
+    private Integer report;
 
     @Column(name="shooter_id")
     @JsonProperty

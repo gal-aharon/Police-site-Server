@@ -20,7 +20,7 @@ public class kidnapReportController {
     }
 
     @GetMapping("id/{id}")
-    public List<kidnapReport> getById(@PathVariable String id) {
+    public List<kidnapReport> getById(@PathVariable Integer id) {
         return kidnapReportService.getById(id);
     }
 }

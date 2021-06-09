@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface shootingReportRepository extends JpaRepository<shootingReport, String> {
-    shootingReport findByReport(String ReportId);
+    shootingReport findByReport(Integer ReportId);
 }
 
