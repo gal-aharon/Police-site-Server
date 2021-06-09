@@ -19,6 +19,11 @@ public class reportController {
         return reportService.getAll();
     }
 
+    @GetMapping("/newest")
+    public report getNewest() {
+        return reportService.getNewest();
+    }
+
     @PostMapping("/add")
     @ResponseBody
     public void addActivity(@RequestBody GeneralReport newReport) {

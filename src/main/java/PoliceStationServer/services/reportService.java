@@ -29,12 +29,12 @@ public class reportService {
         return reportRepository.findAll();
     }
 
-    public report getLatestReport() { return reportRepository.findAll(Sort.by(Sort.Direction.DESC, "ev_report_time")).get(0); }
+    public report getNewest() { return reportRepository.findAll(Sort.by(Sort.Direction.DESC, "ev_report_time")).get(0); }
 
     public void add(GeneralReport report) {
         reportRepository.save(report.getRep());
 
-        report newestReport = getLatestReport();
+        report newestReport = getNewest();
 
         if (report.getAccidentRep() != null) {
             report.getAccidentRep().setReport(newestReport.getReport_id());
