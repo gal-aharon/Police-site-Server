@@ -20,4 +20,7 @@ public class shootingReportService {
         return shootingReportRepository.findByReport(id);
     }
 
+    public void add(shootingReport shootingReport) {
+        shootingReportRepository.save(shootingReport);
+    }
 }

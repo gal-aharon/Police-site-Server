@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="policeStationServer" />
+        <module name="Police-site-Server" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Police-site-Server" options="-parameters" />
       <module name="policeStationServer" options="-parameters" />
     </option>
   </component>
