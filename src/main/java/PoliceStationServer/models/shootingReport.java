@@ -30,5 +30,8 @@ public class shootingReport {
     @Column(name="shooter_id")
     @JsonProperty
     private String shooter_id;
-    
+
+    public void setReport(Integer report) {
+        this.report = report;
+    }
 }

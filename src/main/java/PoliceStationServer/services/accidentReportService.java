@@ -18,4 +18,8 @@ public class accidentReportService {
     public accidentReport getById(Integer id) {
         return accidentReportRepository.findByReport(id);
     }
+
+    public void add(accidentReport accidentRep) {
+        accidentReportRepository.save(accidentRep);
+    }
 }

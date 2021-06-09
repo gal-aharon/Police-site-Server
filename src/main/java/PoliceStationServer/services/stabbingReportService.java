@@ -20,4 +20,7 @@ public class stabbingReportService {
         return stabbingReportRepository.findByReport(id);
     }
 
+    public void add(stabbingReport stabbingReport) {
+        stabbingReportRepository.save(stabbingReport);
+    }
 }

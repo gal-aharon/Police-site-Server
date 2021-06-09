@@ -45,4 +45,8 @@ public class report {
 
     public report() {
     }
+
+    public Integer getReport_id() {
+        return report_id;
+    }
 }

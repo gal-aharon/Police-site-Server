@@ -31,4 +31,7 @@ public class stabbingReport {
     @JsonProperty
     private String stabber_id;
 
+    public void setReport(Integer report) {
+        this.report = report;
+    }
 }

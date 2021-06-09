@@ -20,4 +20,8 @@ public class kidnapReportService {
     public kidnapReport getById(Integer id) {
         return kidnapReportRepository.findByReport(id);
     }
+
+    public void add(kidnapReport kidnappingReport) {
+        kidnapReportRepository.save(kidnappingReport);
+    }
 }

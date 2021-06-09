@@ -1,11 +1,9 @@
 package PoliceStationServer.controllers;
 
+import PoliceStationServer.models.GeneralReport;
 import PoliceStationServer.models.report;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,5 +17,17 @@ public class reportController {
     @GetMapping("")
     public List<report> getAll() {
         return reportService.getAll();
+    }
+
+    @GetMapping("/newest")
+    public report getNewest() {
+        return reportService.getNewest();
+    }
+
+    @PostMapping("/add")
+    @ResponseBody
+    public void addActivity(@RequestBody GeneralReport newReport) {
+
+        reportService.add(newReport);
     }
 }

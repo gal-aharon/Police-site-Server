@@ -31,4 +31,8 @@ public class kidnapReport {
     @JsonProperty
     private String kidnapped_id;
 
+
+    public void setReport(Integer report) {
+        this.report = report;
+    }
 }

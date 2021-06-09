@@ -30,4 +30,8 @@ public class accidentReport {
     @Column(name="report_id")
     @JsonProperty
     private Integer report;
+
+    public void setReport(Integer report) {
+        this.report = report;
+    }
 }
