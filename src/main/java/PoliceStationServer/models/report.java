@@ -26,9 +26,10 @@ public class report {
     private String reporter_id;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "report_id")
     @JsonProperty
-    private String report_id;
+    private Integer report_id;
 
     @Column(name = "ev_loc_x")
     @JsonProperty

@@ -22,9 +22,10 @@ public class kidnapReport {
     private String report;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "kidnap_report_id")
     @JsonProperty
-    private String kidnapId;
+    private Integer kidnapId;
 
     @Column(name = "kidnapped_id")
     @JsonProperty

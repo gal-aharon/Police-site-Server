@@ -22,9 +22,10 @@ public class accidentReport {
     private Integer casualties_num;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="accident_report_id")
     @JsonProperty
-    private String accidentId;
+    private Integer accidentId;
 
     @Column(name="report_id")
     @JsonProperty
