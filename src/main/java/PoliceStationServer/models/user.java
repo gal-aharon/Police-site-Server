@@ -50,4 +50,12 @@ public class user {
 
     public user() {
     }
+
+    public void setCur_locx(Double cur_locx) {
+        this.cur_locx = cur_locx;
+    }
+
+    public void setCur_locy(Double cur_locy) {
+        this.cur_locy = cur_locy;
+    }
 }

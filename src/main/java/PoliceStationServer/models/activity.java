@@ -27,9 +27,10 @@ public class activity {
     private String act_goal;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="act_id")
     @JsonProperty
-    private String act_id;
+    private Integer act_id;
 
     @Column(name="status")
     @JsonProperty

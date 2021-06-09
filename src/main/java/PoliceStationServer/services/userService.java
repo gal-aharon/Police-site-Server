@@ -16,4 +16,10 @@ public class userService {
         return userRepository.findAll();
     }
 
+    public void changeLoc(user user, double x, double y) {
+        user.setCur_locx(x);
+        user.setCur_locy(y);
+        userRepository.save(user);
+    }
+
 }
