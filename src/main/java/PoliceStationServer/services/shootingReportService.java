@@ -16,7 +16,7 @@ public class shootingReportService {
         return shootingReportRepository.findAll();
     }
 
-    public List<shootingReport> getById(String id) {
+    public shootingReport getById(String id) {
         return shootingReportRepository.findByReport(id);
     }
 

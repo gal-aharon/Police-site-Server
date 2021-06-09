@@ -12,7 +12,7 @@ public class activity {
 
     @Column(name="act_type")
     @JsonProperty
-    private String actType;
+    private String act_type;
 
     @Column(name="act_time")
     @JsonProperty

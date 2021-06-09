@@ -21,7 +21,7 @@ public class shootingReportController {
     }
 
     @GetMapping("id/{id}")
-    public List<shootingReport> getById(@PathVariable String id) {
+    public shootingReport getById(@PathVariable String id) {
         return shootingReportService.getById(id);
     }
 }
