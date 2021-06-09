@@ -44,22 +44,22 @@ public class reportService {
 
         if (report.getAccidentRep() != null) {
             System.out.println("adding accident" + report.getAccidentRep());
-            report.getAccidentRep().setReport(newestReport.getReport_id());
+            report.getAccidentRep().setReport(newestReport.getReport_id() + 1);
             System.out.println("adding accident3" + report.getAccidentRep());
             accidentReportService.add(report.getAccidentRep());
         } else if (report.getKidnappingReport() != null) {
             System.out.println("adding kidnapping" + report.getKidnappingReport());
-            report.getKidnappingReport().setReport(newestReport.getReport_id());
+            report.getKidnappingReport().setReport(newestReport.getReport_id() + 1);
             System.out.println("adding kidnapping2" + report.getKidnappingReport());
             kidnappingReportService.add(report.getKidnappingReport());
         } else if (report.getStabbingReport() != null) {
             System.out.println("adding stabbing" + report.getStabbingReport());
-            report.getStabbingReport().setReport(newestReport.getReport_id());
+            report.getStabbingReport().setReport(newestReport.getReport_id() + 1);
             System.out.println("adding stabbing2" + report.getStabbingReport());
             stabbingReportService.add(report.getStabbingReport());
         } else {
             System.out.println("adding shooting" + report.getShootingReport());
-            report.getShootingReport().setReport(newestReport.getReport_id());
+            report.getShootingReport().setReport(newestReport.getReport_id() + 1);
             System.out.println("adding shooting2" + report.getShootingReport());
             shootingReportService.add(report.getShootingReport());
         }

@@ -27,7 +27,7 @@ public class reportController {
     @PostMapping("/add")
     @ResponseBody
     public void addActivity(@RequestBody GeneralReport newReport) {
-        System.out.println("in controller" + newReport);
+        System.out.println("in controller" + newReport.getRep());
         reportService.add(newReport);
         System.out.println("after controller");
     }
