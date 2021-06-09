@@ -52,4 +52,12 @@ public class activity {
 
     public activity() {
     }
+
+    public Set<user> getPo_list() {
+        return po_list;
+    }
+
+    public Integer getAct_id() {
+        return act_id;
+    }
 }

@@ -62,4 +62,8 @@ public class user {
     public void setCur_locy(Double cur_locy) {
         this.cur_locy = cur_locy;
     }
+
+    public String getUser_id() {
+        return user_id;
+    }
 }
