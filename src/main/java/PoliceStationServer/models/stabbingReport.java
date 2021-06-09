@@ -11,11 +11,11 @@ public class stabbingReport {
 
     @Column(name="weapon_type")
     @JsonProperty
-    private String weaponType;
+    private String weapon_type;
 
     @Column(name="casualties_num")
     @JsonProperty
-    private Integer casualtiesNum;
+    private Integer casualties_num;
 
     @Id
     @Column(name="stabbing_report_id")
@@ -28,6 +28,6 @@ public class stabbingReport {
 
     @Column(name="stabber_id")
     @JsonProperty
-    private String stabberId;
+    private String stabber_id;
 
 }

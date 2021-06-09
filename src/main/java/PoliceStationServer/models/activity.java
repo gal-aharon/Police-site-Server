@@ -16,20 +16,20 @@ public class activity {
 
     @Column(name="act_time")
     @JsonProperty
-    private String actTime;
+    private String act_time;
 
     @ManyToMany(mappedBy = "activities")
     @JsonProperty
-    private Set<user> poList = new HashSet<>();
+    private Set<user> po_list = new HashSet<>();
 
     @Column(name="act_goal")
     @JsonProperty
-    private String actGoal;
+    private String act_goal;
 
     @Id
     @Column(name="act_id")
     @JsonProperty
-    private String actId;
+    private String act_id;
 
     @Column(name="status")
     @JsonProperty
@@ -37,15 +37,15 @@ public class activity {
 
     @Column(name="act_approver")
     @JsonProperty
-    private String actApprover;
+    private String act_approver;
 
     @Column(name="act_loc_x")
     @JsonProperty
-    private Double actLocX;
+    private Double act_locx;
 
     @Column(name="act_loc_y")
     @JsonProperty
-    private Double actLocY;
+    private Double act_locy;
 
     public activity() {
     }

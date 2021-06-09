@@ -9,82 +9,39 @@ import javax.persistence.*;
 @Table(name="report")
 public class report {
 
-    @Column(name="ev_type")
+    @Column(name = "ev_type")
     @JsonProperty
-    private String evType;
+    private String ev_type;
 
-    @Column(name="ev_time")
+    @Column(name = "ev_time")
     @JsonProperty
-    private String evTime;
+    private String ev_time;
 
-    @Column(name="ev_report_time")
+    @Column(name = "ev_report_time")
     @JsonProperty
-    private String evReportTime;
+    private String ev_report_time;
 
-    @Column(name="reporter_id")
+    @Column(name = "reporter_id")
     @JsonProperty
-    private String reporter;
+    private String reporter_id;
 
     @Id
-    @Column(name="report_id")
+    @Column(name = "report_id")
     @JsonProperty
-    private String reportId;
+    private String report_id;
 
-    @Column(name="ev_loc_x")
+    @Column(name = "ev_loc_x")
     @JsonProperty
-    private Double evLocationX;
+    private Double ev_locx;
 
-    @Column(name="ev_loc_y")
+    @Column(name = "ev_loc_y")
     @JsonProperty
-    private Double evLocationY;
+    private Double ev_locy;
 
-    @Column(name="ev_area")
+    @Column(name = "ev_area")
     @JsonProperty
-    private String evArea;
+    private String ev_area;
 
     public report() {
-    }
-
-    public report(report r) {
-        this.evType = r.getEvType();
-        this.evTime = r.getEvTime();
-        this.evReportTime = r.getEvReportTime();
-        this.reporter = r.getReporter();
-        this.reportId = r.getReportId();
-        this.evLocationX = r.getEvLocationX();
-        this.evLocationY = r.getEvLocationY();
-        this.evArea = r.getEvArea();
-    }
-
-    public String getEvType() {
-        return evType;
-    }
-
-    public String getEvTime() {
-        return evTime;
-    }
-
-    public String getEvReportTime() {
-        return evReportTime;
-    }
-
-    public String getReporter() {
-        return reporter;
-    }
-
-    public String getReportId() {
-        return reportId;
-    }
-
-    public Double getEvLocationX() {
-        return evLocationX;
-    }
-
-    public Double getEvLocationY() {
-        return evLocationY;
-    }
-
-    public String getEvArea() {
-        return evArea;
     }
 }

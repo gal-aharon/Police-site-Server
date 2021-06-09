@@ -21,24 +21,24 @@ public class user {
 
     @Column(name="full_name")
     @JsonProperty
-    private String fullName;
+    private String full_name;
 
     @Id
     @Column(name="user_id")
     @JsonProperty
-    private String userId;
+    private String user_id;
 
     @Column(name="user_perm")
     @JsonProperty
-    private String userPerm;
+    private String user_perm;
 
     @Column(name="cur_loc_x")
     @JsonProperty
-    private Double curLocX;
+    private Double cur_locx;
 
     @Column(name="cur_loc_y")
     @JsonProperty
-    private Double curLocY;
+    private Double cur_locy;
 
     @ManyToMany(cascade = { CascadeType.ALL })
     @JoinTable(

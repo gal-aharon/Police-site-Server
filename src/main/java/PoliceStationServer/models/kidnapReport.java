@@ -11,11 +11,11 @@ public class kidnapReport {
 
     @Column(name = "kidnapper_id")
     @JsonProperty
-    private String kidnapperID;
+    private String kidnapper_id;
 
     @Column(name = "last_place_known")
     @JsonProperty
-    private String lastPlace;
+    private String last_place_known;
 
     @Column(name = "report_id")
     @JsonProperty
@@ -28,7 +28,7 @@ public class kidnapReport {
 
     @Column(name = "kidnapped_id")
     @JsonProperty
-    private String kidnappedId;
+    private String kidnapped_id;
 
     public kidnapReport() {
         super();
