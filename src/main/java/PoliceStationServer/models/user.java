@@ -3,6 +3,7 @@ package PoliceStationServer.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -47,6 +48,9 @@ public class user {
             inverseJoinColumns = { @JoinColumn(name = "activity_id") }
     )
     Set<activity> activities = new HashSet<>();
+
+    @OneToMany(targetEntity=activity.class, mappedBy="act_approver",cascade=CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<activity> user = new ArrayList<>();
 
     public user() {
     }

@@ -37,9 +37,10 @@ public class activity {
     @JsonProperty
     private String status;
 
-    @Column(name="act_approver")
+    @ManyToOne()
+    @JoinColumn(name="act_approver", referencedColumnName = "user_id", insertable = false, updatable = false)
     @JsonProperty
-    private String act_approver;
+    private user act_approver;
 
     @Column(name="act_loc_x")
     @JsonProperty
