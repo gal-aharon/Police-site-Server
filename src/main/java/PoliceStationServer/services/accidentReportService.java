@@ -15,7 +15,7 @@ public class accidentReportService {
         return accidentReportRepository.findAll();
     }
 
-    public List<accidentReport> getById(Integer id) {
+    public accidentReport getById(Integer id) {
         return accidentReportRepository.findByReport(id);
     }
 }

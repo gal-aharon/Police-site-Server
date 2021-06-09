@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface stabbingReportRepository extends JpaRepository<stabbingReport, String> {
-    List<stabbingReport> findByReport(Integer ReportId);
+    stabbingReport findByReport(Integer ReportId);
 }

@@ -16,7 +16,7 @@ public class stabbingReportService {
         return stabbingReportRepository.findAll();
     }
 
-    public List<stabbingReport> getById(Integer id) {
+    public stabbingReport getById(Integer id) {
         return stabbingReportRepository.findByReport(id);
     }
 
